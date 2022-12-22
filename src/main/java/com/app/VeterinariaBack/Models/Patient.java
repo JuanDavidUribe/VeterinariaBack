@@ -1,9 +1,6 @@
 package com.app.VeterinariaBack.Models;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -25,7 +22,8 @@ public class Patient {
     private int breedId;
 
     @Getter @Setter
-    @Column(name = "birth", nullable = false)
+    @Column(name = "birth", nullable = false, columnDefinition = "date")
+    //format "yyyy-mm-dd"
     private String birth;
 
 }

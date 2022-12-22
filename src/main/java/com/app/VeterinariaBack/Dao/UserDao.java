@@ -6,4 +6,6 @@ public interface UserDao {
     User validate(User user);
 
     boolean login(User userValidated, User user);
+
+    User verifyById(int id);
 }

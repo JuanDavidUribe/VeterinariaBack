@@ -26,4 +26,9 @@ public class UserController {
         }
         return null;
     }
+
+    @GetMapping("/verify/{id}")
+    public User verifyById (@PathVariable int id) {
+        return userDao.verifyById(id);
+    }
 }

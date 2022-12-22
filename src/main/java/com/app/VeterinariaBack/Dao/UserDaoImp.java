@@ -34,4 +34,9 @@ public class UserDaoImp implements UserDao{
         }
         return false;
     }
+
+    @Override
+    public User verifyById(int id) {
+        return entityManager.find(User.class, id);
+    }
 }

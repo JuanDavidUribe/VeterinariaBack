@@ -19,7 +19,8 @@ public class Register {
     private int idPatient;
 
     @Getter @Setter
-    @Column(name = "idPatient", nullable = false)
-    private String dateRegister;
+    @Column(name = "registerDate", nullable = false, columnDefinition = "date")
+    //format "yyyy-mm-dd"
+    private String registerDate;
 
 }
