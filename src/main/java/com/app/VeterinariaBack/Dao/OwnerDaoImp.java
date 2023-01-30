@@ -26,4 +26,14 @@ public class OwnerDaoImp implements OwnerDao{
         }
         return owners;
     }
+
+    @Override
+    public List<Owner> list(String name) {
+        if(name == ""){
+            String query = "from Owner";
+            return entityManager.createQuery(query).getResultList();
+        }
+        String query = "from Owner where name = '" + name + "'";
+        return entityManager.createQuery(query).getResultList();
+    }
 }

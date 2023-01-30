@@ -19,4 +19,14 @@ public class OwnerController {
     public List<Owner> getOwnersByPatient (@PathVariable int id) {
         return ownerDao.getOwnersByPatient(id);
     }
+
+    @GetMapping("/list")
+    public List<Owner> list () {
+        return ownerDao.list("");
+    }
+
+    @GetMapping("/list/{name}")
+    public List<Owner> listWithName (@PathVariable String name) {
+        return ownerDao.list(name);
+    }
 }

@@ -6,4 +6,6 @@ import java.util.List;
 
 public interface OwnerDao {
     List<Owner> getOwnersByPatient(int id);
+
+    List<Owner> list(String name);
 }
