@@ -29,4 +29,19 @@ public class OwnerController {
     public List<Owner> listWithName (@PathVariable String name) {
         return ownerDao.list(name);
     }
+
+    @PostMapping ("/add")
+    public void addOwner (@RequestBody Owner owner) {
+        ownerDao.addOwner(owner);
+    }
+
+    @DeleteMapping ("/delete/{idOwner}/{idPatient}")
+    public void deleteOwnerFromPatient (@PathVariable int idOwner, @PathVariable int idPatient) {
+        ownerDao.deleteOwnerFromPatient(idOwner, idPatient);
+    }
+
+    @GetMapping("addOwnerPatient/{idOwner}/{idPatient}")
+    public void addOwnerPatient (@PathVariable int idOwner, @PathVariable int idPatient) {
+        ownerDao.addOwnerPatient(idOwner, idPatient);
+    }
 }

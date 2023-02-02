@@ -8,4 +8,10 @@ public interface OwnerDao {
     List<Owner> getOwnersByPatient(int id);
 
     List<Owner> list(String name);
+
+    void addOwner(Owner owner);
+
+    void deleteOwnerFromPatient(int idOwner, int idPatient);
+
+    void addOwnerPatient(int idOwner, int idPatient);
 }
