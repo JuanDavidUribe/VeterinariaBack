@@ -35,4 +35,8 @@ public class Owner {
     @Column(name = "cellphone", length = 10, nullable = false)
     private String cellphone;
 
+    @Getter @Setter
+    @Column(name = "observations", length = 100)
+    private String observations;
+
 }
