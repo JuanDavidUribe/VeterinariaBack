@@ -29,4 +29,10 @@ public class PatientDaoImp implements PatientDao{
     public void addPatient(Patient patient) {
         entityManager.persist(patient);
     }
+
+    @Override
+    public void updateName(Patient patient, String newName) {
+        patient.setPatientName(newName);
+        entityManager.merge(patient);
+    }
 }

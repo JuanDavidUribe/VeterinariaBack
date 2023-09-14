@@ -8,4 +8,6 @@ public interface PatientDao {
     List<Patient> list(String name);
 
     void addPatient(Patient patient);
+
+    void updateName (Patient patient, String newName);
 }

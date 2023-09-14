@@ -30,4 +30,9 @@ public class PatientController {
     public void addPatient (@RequestBody Patient patient) {
         patientDao.addPatient(patient);
     }
+
+    @PutMapping("update/{newName}")
+    public void updatePatient (@PathVariable String newName, @RequestBody Patient patient) {
+        patientDao.updateName(patient, newName);
+    }
 }
