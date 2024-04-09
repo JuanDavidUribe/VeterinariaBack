@@ -1,0 +1,13 @@
+type Query {
+    listOwners: [Owner]
+}
+
+type Owner {
+    id: Int,
+    typeId: Int,
+    name: String,
+    city: String,
+    address: String,
+    cellphone: String,
+    observations: String
+}
